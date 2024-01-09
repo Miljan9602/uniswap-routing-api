@@ -28,7 +28,7 @@ const handler: ScheduledHandler = async (event: EventBridgeEvent<string, void>) 
   setGlobalLogger(log)
 
   const s3 = new S3()
-  
+
   let pools
   try {
     pools = await provider.getPools()
@@ -41,6 +41,8 @@ const handler: ScheduledHandler = async (event: EventBridgeEvent<string, void>) 
     log.info(`No ${protocol} pools found from the subgraph for ${chainId.toString()}`)
     return
   }
+
+  log.info(`Protoco ${protocol} pools found from the subgraph for ${chainId.toString()} => ${JSON.stringify(pools)}`)
 
   const key = S3_POOL_CACHE_KEY(process.env.POOL_CACHE_KEY!, chainId, protocol)
 
