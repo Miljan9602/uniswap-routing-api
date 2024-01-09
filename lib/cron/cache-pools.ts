@@ -42,8 +42,6 @@ const handler: ScheduledHandler = async (event: EventBridgeEvent<string, void>) 
     return
   }
 
-  log.info(`Protoco ${protocol} pools found from the subgraph for ${chainId.toString()} => ${JSON.stringify(pools)}`)
-
   const key = S3_POOL_CACHE_KEY(process.env.POOL_CACHE_KEY!, chainId, protocol)
 
   log.info(`Got ${pools.length} ${protocol} pools from the subgraph for ${chainId.toString()}. Saving to ${key}`)

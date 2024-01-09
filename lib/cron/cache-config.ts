@@ -47,7 +47,7 @@ export const chainProtocols = [
     protocol: Protocol.V2,
     chainId: ChainId.AVALANCHE,
     timeout: 90000,
-    provider: new V2SubgraphProvider(ChainId.AVALANCHE, 3, 90000),
+    provider: new V2SubgraphProvider(ChainId.AVALANCHE, 3, 90000, true, 1000),
   },
   {
     protocol: Protocol.V2,
