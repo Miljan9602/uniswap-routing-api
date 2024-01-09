@@ -8,26 +8,27 @@ import { S3_POOL_CACHE_KEY } from '../util/pool-cache-key'
 import { chainProtocols } from './cache-config'
 
 const handler: ScheduledHandler = async (event: EventBridgeEvent<string, void>) => {
-  const chainId: ChainId = parseInt(process.env.chainId!)
-  // const protocol = process.env.protocol! as Protocol
-  const protocol = 'V2' as Protocol
 
-  // Don't retry for V2 as it will timeout and throw 500
-  const provider = chainProtocols.find(
-    (element) => element.protocol == protocol && element.chainId == chainId
-  )!.provider
   const log: Logger = bunyan.createLogger({
     name: 'RoutingLambda',
     serializers: bunyan.stdSerializers,
     level: 'info',
     requestId: event.id,
   })
+
+  const chainId: ChainId = parseInt(process.env.chainId!)
+  const protocol = process.env.protocol! as Protocol
+
+  log.info(`Starting getting pools for ${protocol} on ${chainId}`)
+
+  // Don't retry for V2 as it will timeout and throw 500
+  const provider = chainProtocols.find(
+    (element) => element.protocol == protocol && element.chainId == chainId
+  )!.provider
   setGlobalLogger(log)
 
   const s3 = new S3()
-
-  log.info(`Getting pools for ${protocol} on ${chainId}`)
-
+  
   let pools
   try {
     pools = await provider.getPools()
