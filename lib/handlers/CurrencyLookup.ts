@@ -1,5 +1,5 @@
 import { Currency, Token } from '@uniswap/sdk-core'
-import { ITokenListProvider, ITokenProvider, NATIVE_NAMES_BY_ID, nativeOnChain } from '@uniswap/smart-order-router'
+import { ITokenListProvider, ITokenProvider, NATIVE_NAMES_BY_ID, nativeOnChain } from '@miljan9602/smart-order-router'
 import Logger from 'bunyan'
 import { isAddress } from '../util/isAddress'
 
@@ -71,7 +71,7 @@ export class CurrencyLookup {
 
     // The ITokenListProvider interface expects a list of addresses to lookup tokens.
     // If this isn't an address, we can't do the lookup.
-    // https://github.com/Uniswap/smart-order-router/blob/71fac1905a32af369e30e9cbb52ea36e971ab279/src/providers/token-provider.ts#L23
+    // https://github.com/miljan9602/smart-order-router/blob/71fac1905a32af369e30e9cbb52ea36e971ab279/src/providers/token-provider.ts#L23
     if (!isAddress(tokenRaw)) {
       return undefined
     }

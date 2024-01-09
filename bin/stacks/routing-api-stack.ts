@@ -1,4 +1,4 @@
-import { SUPPORTED_CHAINS } from '@uniswap/smart-order-router'
+import { SUPPORTED_CHAINS } from '@miljan9602/smart-order-router'
 import * as cdk from 'aws-cdk-lib'
 import { ChainId } from '@uniswap/sdk-core'
 import { CfnOutput, Duration } from 'aws-cdk-lib'

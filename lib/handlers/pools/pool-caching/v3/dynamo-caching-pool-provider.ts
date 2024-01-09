@@ -1,6 +1,6 @@
-import { IV3PoolProvider, V3PoolAccessor } from '@uniswap/smart-order-router'
+import { IV3PoolProvider, V3PoolAccessor } from '@miljan9602/smart-order-router'
 import { ChainId, Token } from '@uniswap/sdk-core'
-import { ProviderConfig } from '@uniswap/smart-order-router/build/main/providers/provider'
+import { ProviderConfig } from '@miljan9602/smart-order-router/build/main/providers/provider'
 import { FeeAmount, Pool } from '@uniswap/v3-sdk'
 import { IDynamoCache } from '../cache-dynamo'
 import { DynamoCachingV3Pool } from './cache-dynamo-pool'

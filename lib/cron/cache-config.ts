@@ -1,5 +1,5 @@
 import { Protocol } from '@uniswap/router-sdk'
-import { V2SubgraphProvider, V3SubgraphProvider } from '@uniswap/smart-order-router'
+import { V2SubgraphProvider, V3SubgraphProvider } from '@miljan9602/smart-order-router'
 import { ChainId } from '@uniswap/sdk-core'
 
 export const chainProtocols = [

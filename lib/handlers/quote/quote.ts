@@ -11,7 +11,7 @@ import {
   SimulationStatus,
   IMetric,
   ID_TO_NETWORK_NAME,
-} from '@uniswap/smart-order-router'
+} from '@miljan9602/smart-order-router'
 import { Pool } from '@uniswap/v3-sdk'
 import JSBI from 'jsbi'
 import _ from 'lodash'

@@ -1,5 +1,5 @@
 import { Protocol } from '@uniswap/router-sdk'
-import { setGlobalLogger } from '@uniswap/smart-order-router'
+import { setGlobalLogger } from '@miljan9602/smart-order-router'
 import { EventBridgeEvent, ScheduledHandler } from 'aws-lambda'
 import { S3 } from 'aws-sdk'
 import { ChainId } from '@uniswap/sdk-core'

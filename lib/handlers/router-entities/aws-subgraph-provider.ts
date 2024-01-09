@@ -5,7 +5,7 @@ import {
   log,
   V2SubgraphPool,
   V3SubgraphPool,
-} from '@uniswap/smart-order-router'
+} from '@miljan9602/smart-order-router'
 import { S3 } from 'aws-sdk'
 import { ChainId } from '@uniswap/sdk-core'
 import NodeCache from 'node-cache'

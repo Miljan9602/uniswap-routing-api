@@ -34,7 +34,7 @@ import {
   CachingV2PoolProvider,
   TokenValidatorProvider,
   ITokenPropertiesProvider,
-} from '@uniswap/smart-order-router'
+} from '@miljan9602/smart-order-router'
 import { TokenList } from '@uniswap/token-lists'
 import { default as bunyan, default as Logger } from 'bunyan'
 import { ethers } from 'ethers'
@@ -51,8 +51,8 @@ import { DefaultEVMClient } from './evm/EVMClient'
 import { InstrumentedEVMProvider } from './evm/provider/InstrumentedEVMProvider'
 import { deriveProviderName } from './evm/provider/ProviderName'
 import { V2DynamoCache } from './pools/pool-caching/v2/v2-dynamo-cache'
-import { OnChainTokenFeeFetcher } from '@uniswap/smart-order-router/build/main/providers/token-fee-fetcher'
-import { PortionProvider } from '@uniswap/smart-order-router/build/main/providers/portion-provider'
+import { OnChainTokenFeeFetcher } from '@miljan9602/smart-order-router/build/main/providers/token-fee-fetcher'
+import { PortionProvider } from '@miljan9602/smart-order-router/build/main/providers/portion-provider'
 
 export const SUPPORTED_CHAINS: ChainId[] = [
   ChainId.MAINNET,
